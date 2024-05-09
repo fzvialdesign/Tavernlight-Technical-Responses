@@ -19,7 +19,7 @@ end
 function onLogout(player)
   if player:getStorageValue(1000) == 1 then
     -- Remove addEvent call
-    -- Added player:setStorageValue call otherwise found in removed releaseStorage function
+    -- Added player:setStorageValue call from removed releaseStorage function
     player:setStorageValue(1000, -1)
   end
 
