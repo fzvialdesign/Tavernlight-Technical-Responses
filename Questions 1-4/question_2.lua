@@ -10,10 +10,15 @@ end
 
 -- Modified code
 
+-- Implemented indentation and spacing for readability
 -- Move method description to before the function definition
 -- Removed "this method is supposed to" from the method description
 
--- Print names of all guilds that have less than memberCount max members
+--[[
+
+Print names of all guilds that have less than memberCount max members
+
+]]--
 function printSmallGuildNames(memberCount)
   local selectGuildQuery = "SELECT name FROM guilds WHERE max_members < %d;"
   local resultId = db.storeQuery(string.format(selectGuildQuery, memberCount))
@@ -27,7 +32,9 @@ function printSmallGuildNames(memberCount)
 	print(guildName)
 end
 
---[[ Explanation
+-- Explanation
+
+--[[
 
 Though the resultId is local, that does not prevent the result global variable
 related to storeQuery from being reset properly. This means that the original

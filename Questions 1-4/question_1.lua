@@ -14,8 +14,14 @@ end
 -- Modified code
 
 -- Implemented indentation and spacing for readability
+-- Implemented function description for comprehension
 -- Remove releaseStorage function
 
+--[[
+
+Sets the storage value of a player with a storage value of 1 at 1000 to -1
+
+]]--
 function onLogout(player)
   if player:getStorageValue(1000) == 1 then
     -- Remove addEvent call
@@ -26,7 +32,9 @@ function onLogout(player)
   return true
 end
 
---[[ Explanation
+-- Explanation
+
+--[[
 
 The original code checks the storage value at the point '1000' and then 
 proceeds to release the storage value 1000 milliseconds from the initial check 
